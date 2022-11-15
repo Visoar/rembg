@@ -10,7 +10,7 @@ RUN apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/machi
 
 RUN apt update -y
 RUN apt upgrade -y
-RUN apt install -y curl software-properties-common
+RUN apt install -y curl software-properties-common wget
 RUN add-apt-repository ppa:deadsnakes/ppa
 RUN apt install -y python3.9 python3.9-distutils
 RUN curl https://bootstrap.pypa.io/get-pip.py | python3.9
