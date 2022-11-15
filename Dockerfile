@@ -21,9 +21,9 @@ COPY . .
 RUN python3.9 -m pip install .[gpu]
 
 RUN mkdir -p ~/.u2net
-RUN wget https://pix-sg.oss-ap-southeast-1.aliyuncs.com/u2netp.onnx
-RUN wget https://pix-sg.oss-ap-southeast-1.aliyuncs.com/u2net.onnx
-RUN wget https://pix-sg.oss-ap-southeast-1.aliyuncs.com/u2net_human_seg.onnx
+RUN wget -P ~/.u2net https://pix-sg.oss-ap-southeast-1.aliyuncs.com/u2netp.onnx
+RUN wget -P ~/.u2net https://pix-sg.oss-ap-southeast-1.aliyuncs.com/u2net.onnx
+RUN wget -P ~/.u2net https://pix-sg.oss-ap-southeast-1.aliyuncs.com/u2net_human_seg.onnx
 
 EXPOSE 5000
 ENTRYPOINT ["rembg"]
