@@ -16,5 +16,4 @@ RUN wget -P ~/.u2net https://pix-sg.oss-ap-southeast-1.aliyuncs.com/u2netp.onnx
 RUN wget -P ~/.u2net https://pix-sg.oss-ap-southeast-1.aliyuncs.com/u2net_human_seg.onnx
 
 EXPOSE 5000
-ENTRYPOINT ["rembg"]
-CMD ["s"]
+ENTRYPOINT ["rembg s"]
