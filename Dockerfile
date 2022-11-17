@@ -5,9 +5,7 @@ RUN apt install wget
 
 WORKDIR /rembg
 
-COPY u2net.onnx .
-COPY u2netp.onnx .
-COPY u2net_human_seg.onnx .
+COPY . .
 RUN pip install rembg
 
 RUN mkdir -p ~/.u2net
