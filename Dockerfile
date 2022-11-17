@@ -1,5 +1,7 @@
 FROM python:3.9
 
+ENV DEBIAN_FRONTEND noninteractive
+
 RUN apt update
 RUN apt install wget
 
