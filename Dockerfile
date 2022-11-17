@@ -1,12 +1,12 @@
-FROM python:3.9.15-alpine
+FROM python:3.9
 
-RUN apk update
-RUN apk add wget
+RUN apt update
+RUN apt install wget
 
 WORKDIR /rembg
 
 COPY . .
-RUN python3.9 -m pip install .
+RUN pip install .
 
 RUN mkdir -p ~/.u2net
 RUN wget -P ~/.u2net https://pix-sg.oss-ap-southeast-1.aliyuncs.com/u2netp.onnx
